@@ -26,7 +26,7 @@ public partial class _Default : System.Web.UI.Page
     {
         if (e.MenuType == DevExpress.Web.ASPxPivotGrid.PivotGridPopupMenuType.FieldValueMenu)
         {
-            DevExpress.Web.ASPxMenu.MenuItem item = e.Menu.Items.Add("Filter By This Value", "Filter");
+            DevExpress.Web.MenuItem item = e.Menu.Items.Add("Filter By This Value", "Filter");
             item.BeginGroup = true;
             e.Menu.ClientSideEvents.PopUp = "function ASPxClientMenuItemEventHandler(s, e) { MenuItemPopUpHandle(s, e); }";
             e.Menu.ClientSideEvents.CloseUp = "function ASPxClientMenuItemEventHandler(s, e) { MenuItemCloseUpHandle(s, e); }";

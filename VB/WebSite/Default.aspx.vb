@@ -22,7 +22,7 @@ Partial Public Class _Default
 	End Sub
 	Protected Sub ASPxPivotGrid1_PopupMenuCreated(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxPivotGrid.PivotPopupMenuCreatedEventArgs)
 		If e.MenuType = DevExpress.Web.ASPxPivotGrid.PivotGridPopupMenuType.FieldValueMenu Then
-			Dim item As DevExpress.Web.ASPxMenu.MenuItem = e.Menu.Items.Add("Filter By This Value", "Filter")
+			Dim item As DevExpress.Web.MenuItem = e.Menu.Items.Add("Filter By This Value", "Filter")
 			item.BeginGroup = True
 			e.Menu.ClientSideEvents.PopUp = "function ASPxClientMenuItemEventHandler(s, e) { MenuItemPopUpHandle(s, e); }"
 			e.Menu.ClientSideEvents.CloseUp = "function ASPxClientMenuItemEventHandler(s, e) { MenuItemCloseUpHandle(s, e); }"
